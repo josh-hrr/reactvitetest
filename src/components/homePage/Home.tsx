@@ -10,6 +10,7 @@ import techImage from '../../assets/img/tech_V2.png';
 import goalsImage from '../../assets/img/goals.png';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
 
 
 function Home () { 
@@ -45,10 +46,10 @@ function Home () {
             <Col md={6} xs={12} className="p-0 d-lg-flex flex-column justify-content-center align-items-end" style={{height: '100%'}}>
                 <h1 className="m-0 fw-bold">Learn by {text} </h1>  
                 <h4 className="mb-4">Your Digital Learning Companion</h4> 
-                <div className=""> 
-                    <NavLink to="/getting-started">
+                <div className="d-flex justify-content-center"> 
+                    <Nav.Link href="#for-students">
                         <button className="btn btn-primary m-1">Comenzar ahora</button> 
-                    </NavLink>
+                    </Nav.Link>
                         <button className="btn btn-success m-1">WhatsApp</button>
                 </div> 
             </Col> 
@@ -112,7 +113,9 @@ function Home () {
                 <h1 className="m-0 fw-bold">Para Estudiantes</h1>  
                 <h4 className="m-4 m-sm-0 mb-md-4">Comienza tus estudios con nosotros y ten acceso a clases con profesores en vivo</h4> 
                 <div className="">
+                    <NavLink to="/getting-started">
                     <button className="btn btn-light m-1">Conoce más</button> 
+                    </NavLink>
                 </div> 
             </Col>  
         </Row>  
