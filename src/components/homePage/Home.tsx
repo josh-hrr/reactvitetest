@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 
 
 function Home () { 
-    const [text, setText] = useState('doing'); 
+    const [text, setText] = useState('having fun'); 
 
     useEffect(() => {
         const texts = ['doing', 'having fun', 'playing'];
@@ -42,7 +42,7 @@ function Home () {
             backgroundColor: '#81B622',  
         }}>
             <Col md={6} xs={12} className="p-0 d-lg-flex flex-column justify-content-center align-items-center" style={{height: '100%'}}>
-                <h1 className="m-0 fw-bold">Learn by <span>{text}</span></h1>  
+                <h1 className="m-0 fw-bold">Learn by {text} </h1>  
                 <h4 className="mb-4">Your Digital Learning Companion</h4> 
                 <div className="">
                     <button className="btn btn-primary m-1">Comenzar ahora</button>
@@ -89,7 +89,7 @@ function Home () {
                      </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item> 
-                <img src={healthImage} style={{height: "40vh"}} alt="" /> 
+                <img src={healthImage} style={{height: "30vh"}} alt="" /> 
                     <Carousel.Caption>
                     <h3>Salud y Recreación</h3> 
                     </Carousel.Caption>
