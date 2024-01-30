@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container'; 
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import NavDropdown from 'react-bootstrap/NavDropdown'; 
 
 function Header() {
   return (
@@ -11,17 +11,19 @@ function Header() {
         
                 <Navbar.Toggle aria-controls="basic-navbar-nav "/>
                     <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto ">
-                        <Nav.Link href="#home" className="text-white border-bottom border-white">Home</Nav.Link>
-                        <Nav.Link href="#about-us" className="text-white border-bottom border-white">Sobre nosotros</Nav.Link>
+                    <Nav className="ms-auto "> 
+                        <Nav.Link href="/#home" className="text-white border-bottom border-white">
+                           Home 
+                        </Nav.Link>
+                        <Nav.Link href="/#about-us" className="text-white">Sobre nosotros</Nav.Link>
                         <NavDropdown title={<span className="text-white" >Servicios</span>} id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#for-students">Estudiante</NavDropdown.Item>
+                        <NavDropdown.Item href="/#for-students">Estudiante</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#for-teachers">
+                        <NavDropdown.Item href="/#for-teachers">
                             Profesor
                         </NavDropdown.Item>
                          <NavDropdown.Divider />
-                        <NavDropdown.Item href="#for-business">
+                        <NavDropdown.Item href="/#for-business">
                             For Business
                         </NavDropdown.Item>
                         </NavDropdown>

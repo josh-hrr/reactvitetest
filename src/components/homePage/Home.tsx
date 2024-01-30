@@ -9,18 +9,19 @@ import languagesImage from '../../assets/img/languages.png';
 import techImage from '../../assets/img/tech_V2.png'; 
 import goalsImage from '../../assets/img/goals.png';
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 function Home () { 
     const [text, setText] = useState('having fun'); 
 
     useEffect(() => {
-        const texts = ['doing', 'having fun', 'playing'];
+        const texts = ['doing', 'doing what you like', 'having fun'];
         let index = 0;
         const intervalId = setInterval(() => {
           index = (index + 1) % texts.length;
           setText(texts[index]);
-        }, 2000); // Change text every 2 seconds
+        }, 1000); // Change text every 2 seconds
     
         return () => clearInterval(intervalId); // Clean up on component unmount
       }, []); 
@@ -39,15 +40,16 @@ function Home () {
             backgroundPosition: 'center',
             height: '80%', 
             backgroundRepeat: 'no-repeat',
-            backgroundColor: '#81B622',  
-            
+            backgroundColor: '#81B622',   
         }}>
             <Col md={6} xs={12} className="p-0 d-lg-flex flex-column justify-content-center align-items-end" style={{height: '100%'}}>
                 <h1 className="m-0 fw-bold">Learn by {text} </h1>  
                 <h4 className="mb-4">Your Digital Learning Companion</h4> 
-                <div className="">
-                    <button className="btn btn-primary m-1">Comenzar ahora</button>
-                    <button className="btn btn-success m-1">WhatsApp</button>
+                <div className=""> 
+                    <NavLink to="/getting-started">
+                        <button className="btn btn-primary m-1">Comenzar ahora</button> 
+                    </NavLink>
+                        <button className="btn btn-success m-1">WhatsApp</button>
                 </div> 
             </Col> 
             <Col md={6} xs={12} className="p-0 d-lg-flex flex-column justify-content-center align-items-start">
