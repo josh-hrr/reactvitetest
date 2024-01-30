@@ -8,9 +8,23 @@ import Carousel from 'react-bootstrap/Carousel';
 import languagesImage from '../../assets/img/languages.png';
 import techImage from '../../assets/img/tech_V2.png';
 import healthImage from '../../assets/img/health.png';
+import { useEffect, useState } from 'react';
 
 
-function Home () {
+function Home () { 
+    const [text, setText] = useState('doing'); 
+
+    useEffect(() => {
+        const texts = ['doing', 'having fun', 'playing'];
+        let index = 0;
+        const intervalId = setInterval(() => {
+          index = (index + 1) % texts.length;
+          setText(texts[index]);
+        }, 2000); // Change text every 2 seconds
+    
+        return () => clearInterval(intervalId); // Clean up on component unmount
+      }, []); 
+
     return (
         <div className='p-0 m-0' >
         <Row className='p-0 m-0'>
@@ -28,7 +42,7 @@ function Home () {
             backgroundColor: '#81B622',  
         }}>
             <Col md={6} xs={12} className="p-0 d-lg-flex flex-column justify-content-center align-items-center" style={{height: '100%'}}>
-                <h1 className="m-0 fw-bold">Learn by doing</h1>  
+                <h1 className="m-0 fw-bold">Learn by <span>{text}</span></h1>  
                 <h4 className="mb-4">Your Digital Learning Companion</h4> 
                 <div className="">
                     <button className="btn btn-primary m-1">Comenzar ahora</button>
@@ -46,7 +60,7 @@ function Home () {
         }}>
             <Col md={12} xs={12} className="p-0 d-flex flex-column justify-content-center align-items-center" style={{height: '100%'}}>
                 <h1 className="m-0 fw-bold">Creamos oportunidades de aprendizaje para todos</h1>  
-                <h4 className="m-4">Comprometidos con tu aprendizaje digital</h4> 
+                <h4 className="m-4">¡Comprometidos con tu aprendizaje digital! </h4> 
             </Col>   
         </Row> 
         <Row className="d-flex justify-content-center align-items-center pt-5 pt-md-0 m-0" 
@@ -60,7 +74,7 @@ function Home () {
         }}>
             <Col md={12} xs={12} className="mt-5 p-0 d-flex flex-column justify-content-center align-items-center" style={{height: '100%'}}>
                  
-                <h2>¡Cursos a tu disponibilidad!</h2>    
+                <h2>Clases en vivo</h2>    
                 <Carousel controls={false}>
                 <Carousel.Item > 
                     <img src={languagesImage} style={{height: "40vh"}} alt="" />
