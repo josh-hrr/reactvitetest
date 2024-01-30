@@ -13,15 +13,15 @@ function Header() {
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto ">
                         <Nav.Link href="#home" className="text-white border-bottom border-white">Home</Nav.Link>
-                        <Nav.Link href="#link" className="text-white border-bottom border-white">Sobre nosotros</Nav.Link>
+                        <Nav.Link href="#about-us" className="text-white border-bottom border-white">Sobre nosotros</Nav.Link>
                         <NavDropdown title={<span className="text-white" >Servicios</span>} id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Estudiante</NavDropdown.Item>
+                        <NavDropdown.Item href="#for-students">Estudiante</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.2">
+                        <NavDropdown.Item href="#for-teachers">
                             Profesor
                         </NavDropdown.Item>
                          <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">
+                        <NavDropdown.Item href="#for-business">
                             For Business
                         </NavDropdown.Item>
                         </NavDropdown>
