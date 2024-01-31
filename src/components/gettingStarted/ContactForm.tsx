@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';  
+import { useEffect } from 'react';
 import {Form, Button} from 'react-bootstrap';
 
 /*
@@ -47,10 +48,13 @@ const handleSubmit = async (event) => {
 
 
 function ContactForm() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return ( 
     <div className="ContactForm m-5">  
       <h1>
-        Solicita tu clase de prueba
+        Solicita tu Clase de Prueba ¡Gratis!
       </h1>
       <br>
       </br>
